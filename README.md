@@ -1,193 +1,41 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/0RQkxnha)
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Hd0ZDj1I)
-# BombLab
+# 报告模板通用指南
+
+通常我们提供包括但不限于 Markdown 格式的报告模板，以便于大家准确精炼地展示助教想要了解的信息。
+
+如果你不使用我们提供的模板，你也需要参考我们提供的模板内容来组织你的报告。
+
+无论我们提供何种格式的报告模板，或你自己选择的制作格式，你在提交时需要提交**Markdown文件**,推荐提交**转换出的 PDF** ，以便于助教查阅。
+
+
+提交时你的目录结构应该是
 
 ```
- ________  ________  _____ ______   ________  ___       ________  ________     
-|\   __  \|\   __  \|\   _ \  _   \|\   __  \|\  \     |\   __  \|\   __  \    
-\ \  \|\ /\ \  \|\  \ \  \\\__\ \  \ \  \|\ /\ \  \    \ \  \|\  \ \  \|\ /_   
- \ \   __  \ \  \\\  \ \  \\|__| \  \ \   __  \ \  \    \ \   __  \ \   __  \  
-  \ \  \|\  \ \  \\\  \ \  \    \ \  \ \  \|\  \ \  \____\ \  \ \  \ \  \|\  \ 
-   \ \_______\ \_______\ \__\    \ \__\ \_______\ \_______\ \__\ \__\ \_______\
-    \|_______|\|_______|\|__|     \|__|\|_______|\|_______|\|__|\|__|\|_______|
+|- report
+  |- report.md
+  |- report.pdf(optional)
+  |- imgs
+    |- img1.png
+    |- img2.png
 ```
 
-## 作业内容
-
-完成包括六个普通 phase 和一个 secret phase 的炸弹，并完成实验报告。
-
-本仓库仅需上传报告文件，**无需上传炸弹文件**。
-
-## 炸弹获取方式和炸弹通过情况
-
-通过访问 [炸弹编译](https://ics.men.ci/bomb/) 进行炸弹的编译和下载。通过访问 [计分板](https://ics.men.ci/bomb/scoreboard) 查看自己的炸弹爆炸结果。
-
-注意: 以上两个网站需要**校园网访问**，所以不要挂梯子。
-
-## 报告要求与评分
-
-本次实验要求拆解炸弹并完成报告，共计 6 个 phase 以及 1 个 secret phase。
-
-请参考报告模板 [report/report.md](./report/report.md) 完成报告上传到 Github 中。在完成报告前，你可能需要复习我们的[总体要求](./report/README.md)。
-
-报告的分数分布如下：  
-
-1. 在报告中贴上自己的scoreboard得分（1分），表格中填写自己每道题的分数（1分）
-2. 每道题自己的分析（3*7分），每道题的答案（1\*7分）
-3. 请务必填写正确的分数，请务必贴上正确的scoreboard得分界面。分数错误者扣1分，截图错误者扣5分。
-4. 即使某道题目没有做出来，也请将自己对题目的分析写在报告中，分析分和答案分是分开计算的。
-5. 分析描述中可以使用图片，但请尽量保证每道题不超过两张图片
-6. 如果你有完成nuclear bomb的内容，也可写在报告中
-
-## 成绩计算方法
-
-### 计分公式
-
-成绩由以下几个部分组成：
-
-#### 1. 炸弹完成分数
-
-```
-炸弹完成分数 = 10 × 炸弹按时完成数量 + 8 * 炸弹延时提交数量
-```
-
-#### 2. 最终得分计算
-
-```
-最终得分 = 炸弹完成分数 + max(y × 报告分数, 20) - 0.5 × 爆炸次数
-```
-
-### ⚠️ 重要说明
-
-- 延期提交后，scoreboard 记录的炸弹分数会变成原来的0.8倍
-- 炸弹完成分数以 scoreboard 记录为准
-
-## 实验步骤
-
-### 1. 下载你的专属bomb💣
-
-访问 [http://ics.men.ci/bomb](http://ics.men.ci/bomb)，完成微人大验证，某些浏览器可能需要点击高级设置->继续前往，点击complie后**刷新**网页，再点击Download下载你的 bomblab。
-
-**注：** 短时间访问会导致服务器卡顿，所以有可能刷新后没有反应，属于正常现象。如果长时间无法下载，请联系助教。
-
-### 2. 布置你的bomb💻
-
-今年实验不限制解答的主机名称，同学们可以在自己的环境下布置（请使用**linux**，其它系统下出现的bug概不负责（bushi））
-
-### 3. 检查你的bomb🔍
-
-```bash
-tar -xvf bomblab.tar
-cat README
-```
-
-README中有这个炸弹的信息，同学们可以通过对比是否是自己的学号进行判断。每个人的炸弹都是通过学号定制的，每个人的答案都不一样，请同学们不要泄露自己的bomb。同时也不要把自己的bomb给别人。
-
-### 4. 开始拆弹✂
-
-`./bomb`中每个炸弹都需要一个输入，当你输入合适的输入后，炸弹就会解除，并视情况进入下一个炸弹。反之，你的炸弹就会爆炸。通过和爆炸都会被记录下来，并上传到服务器。以下是一些拆弹的辅助手段：
-
-- **objdump 反汇编：** `objdump -d ./bomb > bomb.dump`，`bomb.dump` 是程序的汇编代码。
-
-- **gdb：** `gdb bomb`。同时在调试时，可以用 `layout asm` 实时查看汇编指令。基本的gdb调试命令请参考[CS:APP P193-P194](materials/gdb_use.pdf)。
-
-- 你可以将答案记录到一个文件，比如 `solution.txt`，文件的内容和你拆弹时的输入一致（一行为一个phase的输入）。然后将文件名作为参数启动 bomb，例如 `./bomb solution.txt`，它会自动读取文件的内容作为输入（如果文件里只写了前几个phase的答案，后续需要在控制台手动输入其它phase的答案）。也可以用gdb启动：
-
-```bash
-gdb -args bomb solution.txt
-```
-
-### 5. 我拆掉了吗🔥？
-
-通过访问[http://ics.men.ci/bomb/scoreboard](http://ics.men.ci/bomb/scoreboard)，可以观察每道题的通过与爆炸情况。数字是爆炸次数，淡青色背景表示题目通过。注意，爆炸次数会一定程度影响你的最终分数（网站分数仅供参考）。ddl之后网站不再接受炸弹的解除信息，请务必在ddl前进行炸弹拆除，并及时关注自己的爆炸情况。
-
-### 6. 可选nuclear☢ (不计分)
-
-拆除nuclearlab会使用到一些常见(?)技巧
-
-打开参数为：
-
-```bash
-./nuclearlab <student_id> <password>
-```
-
-请在发放的压缩包README中获取你的password。
-
-可能需要修改 nuclearlab 为可执行：
-
-```bash
-chmod 755 nuclearlab
-```
-## 一些学习资料
-- [CS:APP P193-P194](materials/gdb_use.pdf)：介绍了gdb的基本使用方法，顺便提醒一下大家多看这本教材。
-- [bilibili Linux 使用gdb调试入门](https://www.bilibili.com/video/BV1Kq4y1D7n2/?spm_id_from=333.337.search-card.all.click&vd_source=cf91d103de88c6efe6860e12de33503e)：同样介绍了使用gdb的基本调试方法，可以作为补充。
-- [IDA使用教程](materials/ida_use.md):一个方便的反汇编工具（optional）
----
-
-## Tips
-
-1. 你需要在你的github仓库中提交实验报告，请确保 scoreboard 上面有你的成绩，实验截至时间初步定在 **2025年12月17日晚上23:55**。
-
-2. 在 run/continue 之前确保打好断点，防止爆炸。你也可以思考如何使一个"功能完备"的bomb变得"功能残缺"，使得它无法通信、无法爆炸。这将在某种程度上便利你的拆弹工作。
-
-3. 你可以试着不用知道答案，借助gdb速通bomblab（小心栈、变量等各种问题导致程序挂掉）。（助教注：现在服务器会在本地验证你的代码，也就是说直接跳过去的方式行不通）当然最后你还需要正常完成实验来完成你的报告。
-
-4. 你的拆弹过程应当包含理解汇编语言（报告30分）。
-
-5. 如果出现本地拆除、服务端排行榜没同步的情况，在少许等待后如果仍然没反应，请联系助教。
-
-6. 多次拆弹中打断点十分麻烦，可以通过文件设置的方法打断点
-
-   **方案一：** 命令行参数，如 `gdb --ex "break main" program`
-
-   **方案二（推荐）：** 创建`.gdbinit`文件，并在里面按照以下格式写入断点
-
-   ```gdb
-   b phase_1
-   b phase_2
-   b "想要打断的函数"
-   ```
-   在配置.gdbinit文件，可能你会碰到权限问题，解决方法如下：
-   ``` bash
-   mkdir -p /root/.config/gdb 
-   echo "add-auto-load-safe-path /home/bomblab/.gdbinit" >> /root/.config/gdb/gdbinit （把/home/bomblab换成你自己的路径）或者
-   echo "set auto-load safe-path /" >> /root/.config/gdb/gdbinit （不推荐）
-   如果你不是root用户：
-   sudo mkdir -p /root/.config/gdb 
-   echo "add-auto-load-safe-path /home/bomblab/.gdbinit" | sudo tee -a /root/.config/gdb/gdbinit （依然记得替换你自己的路径！）
-   ```
-   eg. 在使用完之后，记得在gdb运行时输入 `info b` 查看当前断点状态，防止错误爆炸。
-   
-7. 你可以选择安装vscode插件来为你的汇编提供高亮。在Extension中安装x86 and x86_64 Assembly，为asm后缀的文件提供高亮。
-8. 祝大家玩的愉快。
-
----
-
-## 一些问题的解决方案
-
-### 1. 网站还是打不开怎么办
-
-可以尝试清一下cookies或者重启浏览器。如果以上两者均尝试过但是还是长时间无法登入，请联系助教。
-
-### 2. 运行中出现 Password Wrong 和 找不到对应路径 怎么办
-
-重新生成一下炸弹，这个原因是本地炸弹和服务器信息不匹配造成的。
-
-### 3. 如何将文件放入wsl并解压
-
-在资源管理器左下方的linux中打开，并按照Ubuntu->home ->用户名的顺序进入，将文件拖进去。随后打开wsl解压即可。
-
-### 4. 答案正确，但是solution.txt会报错
-
-这个是因为vscode在保存txt文件时在尾部使用了 `CRLF` 作为换行符导致的，这个换行符在linux脚本中会引起各种未知bug。
-
-**解决方案：** 使用 `echo "Your answer" >> solution.txt` 进行保存
-
-### 5. 权限不足
-
-输入 `chmod 755 bomb` 解决问题
-
-### 6. 在运行中卡在诡异的函数了怎么办
-
-`CTRL+C` 关闭运行程序，随后 `quit` 退出gdb，之后重新打开就好。
-
+## 通用报告要求
+
+我们有一些跨 lab 共通的报告要求：
+
+1. 不要贴大段的代码，你可以通过以下手段来避免：
+    - 使用伪代码
+    - 用注释替代一些不重要的部分
+    - 如果确实必要，请一小段一小段地复制，并配合文字解释
+2. 如果某段内容很长，请用“总分”的格式来组织，即先分点简述一下，再开始展开。同时，最好先讲你觉得最重要的部分。
+3. 不要写大段“助教知道”的内容，除非助教要求，比如解释非你修改/写的代码的内容。
+4. 尽量精简，不要用 AI 生成工具的车轱辘话来应付报告，我们宁愿你写得很短。
+
+## 关于Markdown
+
+### 方法一：Typora
+https://typora.io/#download
+> 我们可能会于上机课上解释 Typora 的用法。但互联网上的资料已经足够丰富。
+
+### 方法二：VScode插件
+推荐**Markdown Preview Enhanced**插件，可以实时预览Markdown文件,但实际上vscode类似的插件有很多。
+>即便你不导出pdf也请自己先预览一下，以防助教在查看你的报告时有格式错误。
